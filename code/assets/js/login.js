@@ -38,7 +38,7 @@ $('#form-reg').on('submit', function (e) {
     e.preventDefault()
     const data = { username: $('#form-reg [name=username]').val(), password: $('#form-reg [name=password]').val() }
 
-    $.post('/api/reguser', data, (res) => {
+    $.post('http://www.liulongbin.top:3007/api/reguser', data, (res) => {
         // 如果注册失败提示用户
         if (res.status !== 0) return layer.msg(res.message, { icon: 6 });
         layer.msg('注册成功', { icon: 6 })
