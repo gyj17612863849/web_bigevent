@@ -61,6 +61,7 @@ $('#form-login').on('submit', function (e) {
             localStorage.setItem('token', res.token) //setitem() 方法是用来 设置数据存储地址的
             // 跳转到主页
             location.href = '../../../index.html'
+            console.log('测试远程仓库')
         }
     })
 })
