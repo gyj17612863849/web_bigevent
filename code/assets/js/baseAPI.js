@@ -16,8 +16,8 @@ $.ajaxPrefilter(function (options) {
     // 统一给 complete 函数 执行代码
     // 在发起请求后  无论是成功还是失败 都是执行 complete() 回调函数
     options.complete= function (res) {
-        console.log('执行了 complete函数')
-        console.log(res)
+        // console.log('执行了 complete函数')
+        // console.log(res)
       if(res.responseJSON.status===1 && res.responseJSON.message==='身份认证失败！') {
         localStorage.removeItem('token')
         location.href = '/login.html'
